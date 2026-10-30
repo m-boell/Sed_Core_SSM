@@ -1,4 +1,4 @@
-# Southern California Bight (SCB) Sediment Core Correlation State-Space Model (SSM)
+# Southern California Bight Sediment Core Correlation State-Space Model
 
 This repository contains an R and Stan workflow for comparing fish scale deposition rates (SDRs) from four sediment cores and assessing their correlation through time. The cores were taken from the Santa Monica and Santa Barbara Basins. The model estimates a latent ln(SDR) trajectory for each core on a common time grid and the correlation among cores.
 
@@ -22,8 +22,8 @@ All files live in a single RStudio project folder:
 │   ├── Barron_et_al_2015_Diatom_Data.xlsx
 │   └── SMB_SBB_CalCOFI_temperature_data.xlsx
 ├── Stan/
-│   └── Sed_Core_SSM_model.stan      # (compiled executable is created here on first run)
-└── Stan_run/                        # created automatically by the scripts
+│   └── Sed_Core_SSM_model.stan     
+└── Stan_run/                       
     ├── *.rds, Posterior_summary.csv
     └── Figures/
         ├── fig_SDR_trajectories.png
@@ -90,3 +90,8 @@ Reads the saved fit plus the covariate and CalCOFI temperature data and generate
 - **`Supplementary_Fig_2.png`**: Stacked panels over 950-1450 AD (z-scored) comparing the latent SDR trajectories (50% CrI) with SST anomaly, Mo (Mo<sub>EF</sub>, oxygen proxy), and *Rhizosolenia* spp. abundance (upwelling indicator). 
 - **`Supplementary_Fig_3.png`**: Comparison of CalCOFI mean temperature (0-100 m) between the Santa Monica Basin (line 86.7, station 35.0) and Santa Barbara Basin (line 81.8, station 46.9) stations, 1984-2021.
 - **`Supplementary_Fig_4.png`**: Scalar forest plot of the posterior median and 90% credible interval for the parameters μ, ρ, σ<sub>proc</sub>, and τ<sub>obs</sub>.
+
+## Additional resources
+- A repository containing all of the fish scale photographs used to calculate the SMB SDR record can be found here: https://doi.org/10.6084/m9.figshare.34845927
+- This R project and related materials are also housed here: https://doi.org/10.6084/m9.figshare.32988020
+- Once published, a link to the paper detailing this project will be added.
